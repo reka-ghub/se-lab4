@@ -1,0 +1,2 @@
+GT4500,1,10,10,10 # create a torpedo with 2 stores
+TORPEDO,SINGLE
