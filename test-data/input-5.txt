@@ -1,0 +1,2 @@
+GT4500,0,0,0,0 # create a torpedo with 1 primary store 0 torpedoes
+TORPEDO,SINGLE
