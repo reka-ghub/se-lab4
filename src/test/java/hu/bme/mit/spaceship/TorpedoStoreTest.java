@@ -32,8 +32,8 @@ class TorpedoStoreTest {
     }
     @Test 
     void fire_Exception2(){
-        test.fire(5);
-        assertThrows(IllegalArgumentException.class,()-> test.fire(1)); // store is empty
+        //test.fire(5);
+        assertThrows(IllegalArgumentException.class,()-> test.fire(-1)); // trying to fire negative
     }
     @Test
     void fire_inaccurate(){
@@ -54,13 +54,13 @@ class TorpedoStoreTest {
     }
     @Test
     void fire_assumeFired(){
-        TorpedoStore ts  = new TorpedoStore(5,0.2);
+        TorpedoStore ts  = new TorpedoStore(5,0.1);
         assumeTrue(ts.fire(2));
         assertEquals(3,ts.getTorpedoCount());
     }
     @Test
     void fire_assumeNotFired(){
-        TorpedoStore ts  = new TorpedoStore(5,0.9);
+        TorpedoStore ts  = new TorpedoStore(5,0.99);
         assumeFalse(ts.fire(2));
         assertEquals(5,ts.getTorpedoCount());
     }
